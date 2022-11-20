@@ -1,7 +1,7 @@
 #include"project.h"
-u8 g_sec = 0;
-u8 g_min = 0;
-u8 g_hour = 0;
+u8 g_sec = 15;
+u8 g_min = 59;
+u8 g_hour = 11;
 u8 day[3] ="AM";
 
 
@@ -32,7 +32,7 @@ void A_Timer0Excution(void){
 		g_sec = 0;
 	}
 	if (g_hour == 12) {
-		g_hour = 0;
+		g_hour = 1;
 		g_min = 0;
 		g_sec=0;
 		day[0]='P';
